@@ -88,7 +88,7 @@
                             android:layout_height="wrap_content"
                             android:paddingTop="10dp"
                             android:text="@string/numerPhotos"
-                            android:textSize="14sp"
+                            android:textSize="15sp"
                             android:textStyle="bold" />
 
                         <TextView
