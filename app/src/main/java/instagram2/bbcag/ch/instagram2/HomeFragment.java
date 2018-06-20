@@ -7,8 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import instagram2.bbcag.ch.instagram2.R;
-
 public class HomeFragment extends Fragment {
 
     @Nullable
