@@ -31,8 +31,8 @@ public class HomeFragment extends Fragment {
         list.add(new Card("drawable://" + R.drawable.pool, "pool"));
         list.add(new Card("drawable://" + R.drawable.pool, "pool"));
 
-        CustomListAdapter adapter = new CustomListAdapter(this, R.layout.activity_main, list);
-        mListView.setAdapter(adapter);
+//        CustomListAdapter adapter = new CustomListAdapter(this, R.layout.activity_main, list);
+//        mListView.setAdapter(adapter);
 
 
         return view;
