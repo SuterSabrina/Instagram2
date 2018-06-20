@@ -33,5 +33,9 @@
     <string name="photosText">Photos</string>
     <string name="subscribersText">Subscribers</string>
     <string name="subscribedText">subscribed</string>
+    <string name="profilBildAendern">Profilbild ändern</string>
+    <string name="nameOfUser">Name</string>
+    <string name="Biography">Biography</string>
+
 
 </resources>
