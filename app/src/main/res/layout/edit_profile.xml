@@ -4,13 +4,45 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal">
+
+        <Button
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="100dp"
+        android:layout_height="56dp"
+        android:layout_marginLeft="16dp"
+        android:gravity="left"
+        android:textAllCaps="false"
+        android:text="@string/Cancel"/>
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="56dp"
+            android:textSize="17dp"
+            android:text="@string/EditProfileText"
+            android:textColor="@android:color/black"
+            android:gravity="center"/>
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="100dp"
+            android:layout_height="56dp"
+            android:layout_marginRight="16dp"
+            android:gravity="right"
+            android:textAllCaps="false"
+            android:text="@string/Done"/>
+
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:background="?attr/colorPrimary"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"/>
+
+    </LinearLayout>
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
@@ -32,7 +64,9 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="165dp"
             android:text="@string/profilBildAendern"
+            android:textAllCaps="false"
             android:textColor="@color/dunkelblau"/>
+
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
@@ -53,6 +87,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginLeft="40dp"
+                    android:textColor="@android:color/black"
                     android:text="@string/nameOfUser" />
             </LinearLayout>
 
@@ -83,6 +118,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginLeft="40dp"
+                    android:textColor="@android:color/black"
                     android:text="@string/username" />
             </LinearLayout>
 
@@ -112,6 +148,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginLeft="40dp"
+                    android:textColor="@android:color/black"
                     android:text="@string/email" />
             </LinearLayout>
 
@@ -120,7 +157,7 @@
                 android:layout_height="40dp">
 
                 <EditText
-                    android:id="@+id/eMailEditProfile"
+                    android:id="@+id/emailInput"
                     android:layout_width="225dp"
                     android:layout_height="match_parent"
                     android:inputType="text" />
@@ -140,6 +177,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginLeft="40dp"
+                    android:textColor="@android:color/black"
                     android:text="@string/Biography" />
             </LinearLayout>
 
