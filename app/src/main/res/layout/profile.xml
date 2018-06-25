@@ -42,7 +42,8 @@
                 android:layout_marginLeft="100dp"
                 android:layout_marginRight="16dp"
                 android:text="@string/editProfileBnt"
-                android:textSize="8sp" />
+                android:textSize="8sp"
+                android:onClick="goToEditProfilePicture"/>
 
             <TextView
                 android:id="@+id/biografieText"
