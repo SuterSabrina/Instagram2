@@ -14,14 +14,12 @@ public class ProfileActivity extends AppCompatActivity implements OnClickListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile);
-        System.out.print("Hello IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
         Button button = (Button) findViewById(R.id.editBnt);
         button.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        System.out.print("Hello DDDDDDDDDDDDDDDDDDDDDDDDDDDDDD");
         Intent intent = new Intent(this, EditProfilePicture.class);
         startActivity(intent);
 
