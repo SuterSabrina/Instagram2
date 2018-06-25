@@ -1,86 +1,41 @@
 package instagram2.bbcag.ch.instagram2;
 
-import android.nfc.Tag;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.app.Activity;
 import android.util.Log;
-import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.view.View.OnClickListener;
+import android.widget.EditText;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+public class MainActivity extends Activity implements OnClickListener {
 
-public class MainActivity extends AppCompatActivity {
+    String emailAdress;
+    String password;
+    String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.login);
+        Button button = (Button) findViewById(R.id.loginBnt);
 
-        BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
-        bottomNav.setOnNavigationItemSelectedListener(navListener);
+        EditText editTextEmail = (EditText)findViewById(R.id.emailSignUp);
+        CharSequence emailAdress = editTextEmail.getText();
 
-        //I added this if statement to keep the selected fragment when rotating the device
-        if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new HomeFragment()).commit();
-        }
+        EditText editTextPassword = (EditText)findViewById(R.id.passwordSignUp);
+        CharSequence passoword = editTextEmail.getText();
 
-        // Write a message to the database
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("libari");
+        EditText editTextUsername = (EditText)findViewById(R.id.usernameSignUp);
+        CharSequence username = editTextEmail.getText();
 
-        myRef.setValue("Hello, Libari!");
-        // Read from the database
-        myRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                String value = dataSnapshot.getValue(String.class);
-                Log.d("MainActivity", "Value is: " + value);
-            }
-
-            @Override
-            public void onCancelled(DatabaseError error) {
-                // Failed to read value
-                Log.w("MainActivity", "Failed to read value.", error.toException());
-            }
-        });
-
+        button.setOnClickListener(this);
     }
+    @Override
+    public void onClick(View v) {
+        UserModel userModel = new UserModel();
+        if(userModel.isEmailValid(this.emailAdress)){
 
-
-
-
-    private BottomNavigationView.OnNavigationItemSelectedListener navListener =
-            new BottomNavigationView.OnNavigationItemSelectedListener() {
-                @Override
-                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                    Fragment selectedFragment = null;
-
-                    switch (item.getItemId()) {
-                        case R.id.nav_home:
-                            selectedFragment = new HomeFragment();
-                            break;
-                        case R.id.nav_add:
-                            selectedFragment = new AddFragment();
-                            break;
-                        case R.id.nav_profile:
-                            selectedFragment = new ProfileFragment();
-                            break;
-                    }
-
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                            selectedFragment).commit();
-
-                    return true;
-                }
-            };
+        }
+    }
 }
-
