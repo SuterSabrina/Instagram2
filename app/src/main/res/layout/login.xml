@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/background_signup">
+    android:orientation="vertical">
+    <!-- android:background="@drawable/background_signup">-->
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
@@ -53,15 +53,16 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="40dp"/>
 
-            <EditText
-                android:id="@+id/signupLink"
+            <Button
+                android:id="@+id/noLoginButton"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:layout_width="300dp"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
                 android:hint="@string/dontHaveAccount"
                 android:inputType="text"
-                android:textSize="14dp" />
+                android:textSize="10dp" />
         </LinearLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>
