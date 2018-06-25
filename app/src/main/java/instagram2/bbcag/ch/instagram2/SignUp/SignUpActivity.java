@@ -1,12 +1,14 @@
-package instagram2.bbcag.ch.instagram2;
+package instagram2.bbcag.ch.instagram2.SignUp;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;
 import android.widget.Button;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
+
+import instagram2.bbcag.ch.instagram2.R;
+import instagram2.bbcag.ch.instagram2.User.UserModel;
 
 public class SignUpActivity extends Activity implements OnClickListener {
 

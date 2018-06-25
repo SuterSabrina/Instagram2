@@ -1,4 +1,4 @@
-package instagram2.bbcag.ch.instagram2;
+package instagram2.bbcag.ch.instagram2.User;
 
 import android.widget.EditText;
 
