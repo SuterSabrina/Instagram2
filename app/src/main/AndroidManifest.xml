@@ -9,16 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="instagram2.bbcag.ch.instagram2.Login.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignUpActivity">
+        <activity android:name="instagram2.bbcag.ch.instagram2.SignUp.SignUpActivity">
         </activity>
-        <activity android:name=".FeedActivity">
+        <activity android:name="instagram2.bbcag.ch.instagram2.Feed.FeedActivity">
         </activity>
     </application>
 </manifest>
