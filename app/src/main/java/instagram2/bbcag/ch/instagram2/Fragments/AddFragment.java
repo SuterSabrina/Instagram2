@@ -3,6 +3,8 @@ package instagram2.bbcag.ch.instagram2.Fragments;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -27,5 +29,4 @@ public class AddFragment extends Fragment{
         view = inflater.inflate(R.layout.activity_add, container, false);
         return view;
     }
-
 }

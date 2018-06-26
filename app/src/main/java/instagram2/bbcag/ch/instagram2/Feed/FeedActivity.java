@@ -27,7 +27,24 @@ public class FeedActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new HomeFragment()).commit();
         }
+        if (getIntent().getExtras() != null){
+            String key = getIntent().getExtras().getString("Tab");
+            Fragment fragment = new HomeFragment();
+            switch (key){
+                case "add":
+                    fragment = new AddFragment();
+                    break;
+                case "home":
+                    fragment = new HomeFragment();
+                    break;
+                case "profile":
+                    fragment = new ProfileFragment();
+                    break;
+            }
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
+        }
     }
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
