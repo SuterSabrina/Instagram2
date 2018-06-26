@@ -29,13 +29,27 @@ public class EditProfilePicture extends AppCompatActivity{
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //openGallery();
+                openGallery();
 
             }
         });
 
     }
 
+    private void openGallery(){
+        Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
+        startActivityForResult(gallery, PICK_IMAGE);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == RESULT_OK && requestCode == PICK_IMAGE){
+            imageURI = data.getData();
+            imageView.setImageURI(imageURI);
+
+        }
+    }
 
 
 }
