@@ -23,6 +23,7 @@ public class EditProfilePicture extends AppCompatActivity{
     ImageView imageView;
     Button button;
     Button buttonCancel;
+    Button buttonDone;
     private static final int PICK_IMAGE = 100;
     Uri imageURI;
 
@@ -34,6 +35,7 @@ public class EditProfilePicture extends AppCompatActivity{
         imageView = (ImageView)findViewById(R.id.image);
         button = (Button)findViewById(R.id.editProfilePicture);
         buttonCancel = (Button)findViewById(R.id.cancel);
+        buttonDone = (Button)findViewById(R.id.done);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,8 +51,20 @@ public class EditProfilePicture extends AppCompatActivity{
             }
         });
 
+        buttonDone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                saveChanges();
+            }
+        });
+
     }
 
+    private  void saveChanges(){
+        Intent done = new Intent(this.getApplicationContext(), FeedActivity.class);
+        done.putExtra("Tab","profile");
+        startActivity(done);
+    }
     private void cancelAll(){
         Intent cancel = new Intent(this.getApplicationContext(), FeedActivity.class);
         cancel.putExtra("Tab","profile");
