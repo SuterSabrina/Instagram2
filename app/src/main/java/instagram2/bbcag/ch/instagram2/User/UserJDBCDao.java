@@ -5,11 +5,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class UserJDBCDao {
 
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-
-
     public void addNewUser(String username, String name, String email, String password){
-
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("users");
         String userId = myRef.push().getKey();
         User user = new User(username, name, email, password);
