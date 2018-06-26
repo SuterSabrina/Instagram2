@@ -18,10 +18,12 @@ public class HomeFragment extends Fragment{
     Button button;
     private static final int PICK_IMAGE = 100;
     Uri imageURI;
+    View view;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_home, container, false);
+        view = inflater.inflate(R.layout.activity_home, container, false);
+        return view;
     }
 }

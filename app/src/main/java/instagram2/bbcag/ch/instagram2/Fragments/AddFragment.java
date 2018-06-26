@@ -19,11 +19,13 @@ public class AddFragment extends Fragment{
     Button button;
     private static final int PICK_IMAGE = 100;
     Uri imageURI;
+    View view;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_add, container, false);
+        view = inflater.inflate(R.layout.activity_add, container, false);
+        return view;
     }
 
 }

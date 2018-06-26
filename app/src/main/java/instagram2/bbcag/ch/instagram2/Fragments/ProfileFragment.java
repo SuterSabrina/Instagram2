@@ -14,11 +14,12 @@ import instagram2.bbcag.ch.instagram2.R;
 
 public class ProfileFragment extends Fragment implements View.OnClickListener {
 
+    View view;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view =  inflater.inflate(R.layout.activity_profile, container, false);
+        view =  inflater.inflate(R.layout.activity_profile, container, false);
 
         Button button = view.findViewById(R.id.editBnt);
         button.setOnClickListener(this);
