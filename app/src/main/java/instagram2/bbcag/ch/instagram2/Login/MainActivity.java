@@ -26,8 +26,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.loginBnt:
-                UserJDBCDao userJDBCDao = new UserJDBCDao();
-                userJDBCDao.addNewUser("tes1", "tes1t", "t1es", "te1st");
                 Intent intent1 = new Intent(MainActivity.this, FeedActivity.class);
                 startActivity(intent1);
                 break;
