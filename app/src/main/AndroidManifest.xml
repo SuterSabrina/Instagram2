@@ -22,7 +22,5 @@
         </activity>
         <activity android:name="instagram2.bbcag.ch.instagram2.EditProfilePicture">
         </activity>
-        <activity android:name="instagram2.bbcag.ch.instagram2.ProfileActivity">
-        </activity>
     </application>
 </manifest>
