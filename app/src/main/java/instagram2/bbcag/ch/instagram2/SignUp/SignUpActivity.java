@@ -3,6 +3,7 @@ package instagram2.bbcag.ch.instagram2.SignUp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.view.View.OnClickListener;
@@ -10,6 +11,7 @@ import android.widget.EditText;
 
 import instagram2.bbcag.ch.instagram2.Feed.FeedActivity;
 import instagram2.bbcag.ch.instagram2.R;
+import instagram2.bbcag.ch.instagram2.User.User;
 import instagram2.bbcag.ch.instagram2.User.UserJDBCDao;
 import instagram2.bbcag.ch.instagram2.User.ValidateUserSignUp;
 
