@@ -32,7 +32,6 @@ public class SignUpActivity extends Activity implements OnClickListener {
     @Override
     public void onClick(View v) {
         ValidateUserSignUp validateUserSignUp = new ValidateUserSignUp();
-
         emailAdress = validateUserSignUp.getTextOfInputTextField(SignUpActivity.this, R.id.emailSignUp);
         password = validateUserSignUp.getTextOfInputTextField(SignUpActivity.this, R.id.passwordSignUp);
         username = validateUserSignUp.getTextOfInputTextField(SignUpActivity.this, R.id.usernameSignUp);
