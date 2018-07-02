@@ -1,36 +1,40 @@
 package instagram2.bbcag.ch.instagram2.Login;
 
+import android.app.Activity;
+import android.content.Intent;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import java.util.ArrayList;
+
+import instagram2.bbcag.ch.instagram2.Feed.FeedActivity;
 import instagram2.bbcag.ch.instagram2.User.User;
 
 public class LoginJDBCDao {
 
-    ArrayList<User> userArrayList = new ArrayList<User>();
+    public void checkForUserData(final Activity main, final String username, final String password) {
 
-    public void checkForUserData(final String username, final String password) {
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference ref = database.getReference("users");
         ref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+
                 for (DataSnapshot messageSnapshot : dataSnapshot.getChildren()) {
                     User user = new User();
-                    String username = (String) messageSnapshot.child("username").getValue();
-                    String name = (String) messageSnapshot.child("name").getValue();
-                    String pwd = (String) messageSnapshot.child("password").getValue();
-                    String email = (String) messageSnapshot.child("email").getValue();
-                    String id = (String) messageSnapshot.getKey();
-                    user.setName(name);
-                    user.setUsername(username);
-                    user.setPassword(pwd);
-                    user.setEmail(email);
-                    user.setId(id);
-                    userArrayList.add(user);
+                    user.setName((String) messageSnapshot.child("name").getValue());
+                    user.setUsername((String) messageSnapshot.child("username").getValue());
+                    user.setPassword((String) messageSnapshot.child("password").getValue());
+                    user.setEmail((String) messageSnapshot.child("email").getValue());
+                    user.setId(messageSnapshot.getKey());
+
+                    if (doesUserExist(user, username, password)){
+                        Intent intent1 = new Intent(main, FeedActivity.class);
+                        main.startActivity(intent1);
+                        break;
+                    }
                 }
             }
 
@@ -41,20 +45,11 @@ public class LoginJDBCDao {
         });
     }
 
-    public boolean doesUserExist(String username, String password) {
-        for (User u : userArrayList) {
-            if (u.getname().equals(username) && (u.getPassword().equals(password))) {
+    private boolean doesUserExist(User user, String username, String password) {
+            if (user.getUsername().equals(username) && (user.getPassword().equals(password))) {
                 return true;
+            }else{
+                return false;
             }
-        }
-        return false;
-    }
-
-    public ArrayList<User> getUserArrayList() {
-        return userArrayList;
-    }
-
-    public void setUserArrayList(ArrayList<User> userArrayList) {
-        this.userArrayList = userArrayList;
     }
 }

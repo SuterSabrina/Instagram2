@@ -51,11 +51,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 ValidateUserSignUp validateUserSignUp = new ValidateUserSignUp();
                 String userName = validateUserSignUp.getTextOfInputTextField(MainActivity.this, R.id.usernameLogin);
                 String password = validateUserSignUp.getTextOfInputTextField(MainActivity.this, R.id.passwordLogin);
-
-                //Prüfung muss innerhalb dieser Klasse ausgeführt werden!
-                loginJDBCDao.checkForUserData(userName, password);
-                    Intent intent1 = new Intent(MainActivity.this, FeedActivity.class);
-                    startActivity(intent1);
+                loginJDBCDao.checkForUserData(this, userName, password);
                 break;
 
             case R.id.noLoginButton:
