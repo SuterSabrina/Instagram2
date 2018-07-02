@@ -31,6 +31,7 @@ public class LoginJDBCDao {
                     user.setId(messageSnapshot.getKey());
 
                     if (doesUserExist(user, username, password)){
+                        LoggedInUser.loggedInUser.saveLoggedInUser(user);
                         Intent intent1 = new Intent(main, FeedActivity.class);
                         main.startActivity(intent1);
                         break;

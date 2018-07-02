@@ -12,12 +12,7 @@ public class UserJDBCDao {
         DatabaseReference myRef = database.getReference("users");
         String userId = myRef.push().getKey();
         User user = new User(username, name, email, password);
-        this.saveLoggedInUser(userId);
+        LoggedInUser.loggedInUser.saveLoggedInUser(user);
         myRef.child(userId).setValue(user);
-    }
-
-    private void saveLoggedInUser(String id) {
-        LoggedInUser loggedInUser = new LoggedInUser();
-        loggedInUser.setId(id);
     }
 }

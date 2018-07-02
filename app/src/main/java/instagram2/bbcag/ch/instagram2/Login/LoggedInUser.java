@@ -1,32 +1,41 @@
 package instagram2.bbcag.ch.instagram2.Login;
 
+import instagram2.bbcag.ch.instagram2.User.User;
+
 public class LoggedInUser {
+    public static LoggedInUser loggedInUser = new LoggedInUser();
 
     String id;
     String username;
     String password;
 
-    public String getUsername() {
+    public void saveLoggedInUser(User user){
+        setUsername(user.getUsername());
+        setPassword(user.getPassword());
+        setId(user.getId());
+    }
+
+    private String getUsername() {
         return username;
     }
 
-    public void setUsername(String username) {
+    private void setUsername(String username) {
         this.username = username;
     }
 
-    public String getPassword() {
+    private String getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
+    private void setPassword(String password) {
         this.password = password;
     }
 
-    public String getId() {
+    private String getId() {
         return id;
     }
 
-    public void setId(String id) {
+    private void setId(String id) {
         this.id = id;
     }
 }
