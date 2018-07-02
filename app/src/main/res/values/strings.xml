@@ -41,4 +41,5 @@
     <string name="Cancel">Cancle</string>
     <string name="Next">Next</string>
     <string name="Pictures">Pictures</string>
+    <string name="NewPic">Add a new picture!</string>
 </resources>

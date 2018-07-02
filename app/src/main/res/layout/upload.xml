@@ -38,15 +38,15 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/numerPhotos"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:paddingTop="10dp"
-                        android:text="@string/Cancel"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
+                    <Button
+                        android:id="@+id/cancel2"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="100dp"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="16dp"
+                        android:gravity="left"
+                        android:textAllCaps="false"
+                        android:text="@string/Cancel"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -56,15 +56,15 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/numerSubscribers"
+                    <Button
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:id="@+id/addPicture"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:paddingTop="10dp"
                         android:text="@string/Pictures"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
+                        android:textSize="15sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -74,15 +74,15 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/numberSubscribed"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:paddingTop="10dp"
-                        android:text="@string/Done"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
+                    <Button
+                        android:id="@+id/done2"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="100dp"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="16dp"
+                        android:gravity="left"
+                        android:textAllCaps="false"
+                        android:text="@string/Done"/>
 
 
                 </LinearLayout>

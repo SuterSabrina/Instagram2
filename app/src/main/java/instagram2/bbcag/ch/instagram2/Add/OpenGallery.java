@@ -1,41 +1,40 @@
-package instagram2.bbcag.ch.instagram2;
+package instagram2.bbcag.ch.instagram2.Add;
 
-import android.app.Fragment;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import java.net.URI;
-
 import instagram2.bbcag.ch.instagram2.Feed.FeedActivity;
-import instagram2.bbcag.ch.instagram2.Fragments.ProfileFragment;
+import instagram2.bbcag.ch.instagram2.R;
 
-import static android.app.PendingIntent.getActivity;
-
-public class EditProfilePicture extends AppCompatActivity{
+public class OpenGallery extends AppCompatActivity{
 
     ImageView imageView;
     Button button;
     Button buttonCancel;
     Button buttonDone;
+    Button buttonAddPicture;
+
+
     private static final int PICK_IMAGE = 100;
     Uri imageURI;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.edit_profile);
+        setContentView(R.layout.activity_add);
 
-        imageView = (ImageView)findViewById(R.id.image);
-        button = (Button)findViewById(R.id.editProfilePicture);
-        buttonCancel = (Button)findViewById(R.id.cancel);
-        buttonDone = (Button)findViewById(R.id.done);
+
+        imageView = (ImageView)findViewById(R.id.iv);
+        button = (Button)findViewById(R.id.pick);
+        buttonCancel = (Button)findViewById(R.id.cancel2);
+        buttonDone = (Button)findViewById(R.id.done2);
+
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,12 +61,12 @@ public class EditProfilePicture extends AppCompatActivity{
 
     private  void saveChanges(){
         Intent done = new Intent(this.getApplicationContext(), FeedActivity.class);
-        done.putExtra("Tab","profile");
+        done.putExtra("Tab","home");
         startActivity(done);
     }
     private void cancelAll(){
         Intent cancel = new Intent(this.getApplicationContext(), FeedActivity.class);
-        cancel.putExtra("Tab","profile");
+        cancel.putExtra("Tab","home");
         startActivity(cancel);
     }
 

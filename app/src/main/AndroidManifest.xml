@@ -20,7 +20,12 @@
         </activity>
         <activity android:name="instagram2.bbcag.ch.instagram2.Feed.FeedActivity">
         </activity>
-        <activity android:name="instagram2.bbcag.ch.instagram2.EditProfilePicture">
+        <activity android:name="instagram2.bbcag.ch.instagram2.EditProfile.EditProfilePicture">
         </activity>
+        <activity android:name="instagram2.bbcag.ch.instagram2.Add.OpenGallery">
+        </activity>
+        <activity android:name="instagram2.bbcag.ch.instagram2.EditProfile.UpdateProfileJDBCDao">
+        </activity>
+
     </application>
 </manifest>

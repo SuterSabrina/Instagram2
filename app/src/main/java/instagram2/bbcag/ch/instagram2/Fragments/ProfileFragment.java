@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import instagram2.bbcag.ch.instagram2.EditProfilePicture;
+import instagram2.bbcag.ch.instagram2.EditProfile.EditProfilePicture;
 import instagram2.bbcag.ch.instagram2.R;
 
 public class ProfileFragment extends Fragment implements View.OnClickListener {

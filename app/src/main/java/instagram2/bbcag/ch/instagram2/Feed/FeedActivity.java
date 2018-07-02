@@ -1,5 +1,7 @@
 package instagram2.bbcag.ch.instagram2.Feed;
 
+import android.content.Intent;
+import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
@@ -13,6 +15,7 @@ import instagram2.bbcag.ch.instagram2.Fragments.ProfileFragment;
 import instagram2.bbcag.ch.instagram2.R;
 
 public class FeedActivity extends AppCompatActivity {
+    private static final int PICK_IMAGE = 100;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +47,6 @@ public class FeedActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
         }
     }
-
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
