@@ -15,7 +15,7 @@ public class LoggedInUser {
         setId(user.getId());
     }
 
-    private String getUsername() {
+    public String getUsername() {
         return username;
     }
 
@@ -23,7 +23,7 @@ public class LoggedInUser {
         this.username = username;
     }
 
-    private String getPassword() {
+    public String getPassword() {
         return password;
     }
 
@@ -31,7 +31,7 @@ public class LoggedInUser {
         this.password = password;
     }
 
-    private String getId() {
+    public String getId() {
         return id;
     }
 

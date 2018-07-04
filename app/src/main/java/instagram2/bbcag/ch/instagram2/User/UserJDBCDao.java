@@ -11,7 +11,7 @@ public class UserJDBCDao {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("users");
         String userId = myRef.push().getKey();
-        User user = new User(username, name, email, password);
+        User user = new User(username, name, email, password, "");
         LoggedInUser.loggedInUser.saveLoggedInUser(user);
         myRef.child(userId).setValue(user);
     }

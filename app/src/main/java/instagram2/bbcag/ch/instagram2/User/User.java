@@ -2,17 +2,19 @@ package instagram2.bbcag.ch.instagram2.User;
 
 public class User {
 
-    public String id;
-    public String username;
-    public String name;
-    public String email;
-    public String password;
+    private String id;
+    private String username;
+    private String name;
+    private String email;
+    private String password;
+    private String biography;
 
-    public User(String username, String name, String email, String password) {
+    public User(String username, String name, String email, String password, String biography) {
         this.username = username;
         this.name = name;
         this.email = email;
         this.password = password;
+        this.biography = biography;
     }
 
     public User(){
@@ -25,10 +27,6 @@ public class User {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public String getname() {
-        return name;
     }
 
     public void setName(String name) {
@@ -58,4 +56,17 @@ public class User {
     public void setId(String id) {
         this.id = id;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getBiography() {
+        return biography;
+    }
+
+    public void setBiography(String biography) {
+        this.biography = biography;
+    }
+
 }
