@@ -39,6 +39,15 @@ public class ValidateUserSignUp {
         return true;
     }
 
+    public boolean isOnlyText(String text){
+        Pattern pattern = Pattern.compile("[a-zA-Z]+");
+        Matcher matcher = pattern.matcher(text);
+        if(!matcher.find() && text.length() == 0){
+            return false;
+        }
+        return true;
+    }
+
     public String getTextOfInputTextField(Activity activity, Integer id){
         EditText editText = (EditText) activity.findViewById(id);
         String text = editText.getText().toString();
