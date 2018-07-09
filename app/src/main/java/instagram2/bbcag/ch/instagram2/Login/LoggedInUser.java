@@ -8,10 +8,12 @@ public class LoggedInUser {
     String id;
     String username;
     String password;
+    String biography;
 
     public void saveLoggedInUser(User user){
         setUsername(user.getUsername());
         setPassword(user.getPassword());
+        setBiography(user.getBiography());
         setId(user.getId());
     }
 
@@ -37,5 +39,13 @@ public class LoggedInUser {
 
     private void setId(String id) {
         this.id = id;
+    }
+
+    public String getBiography() {
+        return biography;
+    }
+
+    public void setBiography(String biography) {
+        this.biography = biography;
     }
 }
