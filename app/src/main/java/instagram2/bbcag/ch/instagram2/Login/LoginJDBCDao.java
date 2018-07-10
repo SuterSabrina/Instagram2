@@ -47,12 +47,6 @@ public class LoginJDBCDao {
         });
     }
 
-    //public void getUserInformation(String userId) {
-        //FirebaseDatabase database = FirebaseDatabase.getInstance();
-        //DatabaseReference myRef = database.getReference("users");
-
-    //}
-
     private boolean doesUserExist(User user, String username, String password) {
             if (user.getUsername().equals(username) && (user.getPassword().equals(password))) {
                 return true;

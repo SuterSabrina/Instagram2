@@ -26,7 +26,6 @@ public class AddFragment extends Fragment implements View.OnClickListener {
         Button button = view.findViewById(R.id.pick);
         button.setOnClickListener(this);
         return view;
-
     }
 
     @Override

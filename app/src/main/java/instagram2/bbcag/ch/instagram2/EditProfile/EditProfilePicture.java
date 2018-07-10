@@ -24,8 +24,6 @@ public class EditProfilePicture extends AppCompatActivity{
     Button buttonEdit;
     Button buttonCancel;
     Button buttonDone;
-    Button buttonAddPicture;
-
 
     private static final int PICK_IMAGE = 100;
     Uri imageURI;

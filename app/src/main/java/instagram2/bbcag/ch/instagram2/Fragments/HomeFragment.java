@@ -13,11 +13,6 @@ import android.widget.ImageView;
 import instagram2.bbcag.ch.instagram2.R;
 
 public class HomeFragment extends Fragment{
-
-    ImageView imageView;
-    Button button;
-    private static final int PICK_IMAGE = 100;
-    Uri imageURI;
     View view;
 
     @Nullable

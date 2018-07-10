@@ -5,10 +5,10 @@ import instagram2.bbcag.ch.instagram2.User.User;
 public class LoggedInUser {
     public static LoggedInUser loggedInUser = new LoggedInUser();
 
-    String id;
-    String username;
-    String password;
-    String biography;
+    private String id;
+    private String username;
+    private String password;
+    private String biography;
 
     public void saveLoggedInUser(User user){
         setUsername(user.getUsername());

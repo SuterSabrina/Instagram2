@@ -2,11 +2,11 @@ package instagram2.bbcag.ch.instagram2.Add;
 
 public class ImageUploadInfo {
 
-    public String imageName;
+    private String imageName;
 
-    public String imageURL;
+    private String imageURL;
 
-    public ImageUploadInfo() {
+    private ImageUploadInfo() {
 
     }
 
